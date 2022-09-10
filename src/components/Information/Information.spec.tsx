@@ -9,6 +9,12 @@ describe('Information', () => {
     expect(
       screen.getByRole('heading', { name: /pipes puzzle/i })
     ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /choose your level/i })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /current level/i })
+    ).toBeInTheDocument()
     expect(screen.queryAllByLabelText('select-level-button')).toHaveLength(6)
 
     expect(screen.getByTestId('information-wrapper')).toMatchSnapshot()

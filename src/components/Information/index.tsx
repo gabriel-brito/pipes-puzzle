@@ -12,6 +12,8 @@ export default function Information({ currentLevel }: InformationTypes) {
       <S.Heading>Pipes Puzzle</S.Heading>
 
       <S.Levels>
+        <S.Subtitle>Choose your level!</S.Subtitle>
+
         <S.LevelList>
           {levels.map((level) => {
             const isCurrentLevel = level === currentLevel
@@ -31,6 +33,8 @@ export default function Information({ currentLevel }: InformationTypes) {
             )
           })}
         </S.LevelList>
+
+        <S.Subtitle>Current level: {currentLevel}</S.Subtitle>
       </S.Levels>
     </S.Wrapper>
   )

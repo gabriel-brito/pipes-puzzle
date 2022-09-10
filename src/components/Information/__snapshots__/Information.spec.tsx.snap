@@ -25,24 +25,31 @@ exports[`Information should render properly 1`] = `
   margin-bottom: 32px;
 }
 
+.c3 {
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .c2 {
   background-color: var(--bgContrast);
   border-radius: 8px;
   padding: 16px;
 }
 
-.c3 {
+.c4 {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(6,36px);
   list-style: none;
-}
-
-.c4 {
-  height: 45px;
+  margin: 16px;
 }
 
 .c5 {
+  height: 45px;
+}
+
+.c6 {
   background-color: var(--buttonBg);
   border-radius: 8px;
   border: none;
@@ -54,11 +61,11 @@ exports[`Information should render properly 1`] = `
   width: 100%;
 }
 
-.c5:hover {
+.c6:hover {
   opacity: 0.7;
 }
 
-.c6 {
+.c7 {
   background-color: var(--buttonBg);
   background: linear-gradient(135deg,#ff80bf 0,#9580ff 100%);
   border-radius: 8px;
@@ -71,11 +78,11 @@ exports[`Information should render properly 1`] = `
   width: 100%;
 }
 
-.c6:hover {
+.c7:hover {
   opacity: 0.7;
 }
 
-.c7 {
+.c8 {
   background-color: var(--disabledBg);
   border-radius: 8px;
   border: none;
@@ -87,7 +94,7 @@ exports[`Information should render properly 1`] = `
   width: 100%;
 }
 
-.c7:hover {
+.c8:hover {
   opacity: initial;
 }
 
@@ -103,73 +110,84 @@ exports[`Information should render properly 1`] = `
   <nav
     class="c2"
   >
-    <ul
+    <h2
       class="c3"
     >
+      Choose your level!
+    </h2>
+    <ul
+      class="c4"
+    >
       <li
-        class="c4"
-      >
-        <button
-          aria-label="select-level-button"
-          class="c5"
-        >
-          1
-        </button>
-      </li>
-      <li
-        class="c4"
-      >
-        <button
-          aria-label="select-level-button"
-          class="c5"
-        >
-          2
-        </button>
-      </li>
-      <li
-        class="c4"
+        class="c5"
       >
         <button
           aria-label="select-level-button"
           class="c6"
         >
-          3
+          1
         </button>
       </li>
       <li
-        class="c4"
+        class="c5"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c6"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="c5"
       >
         <button
           aria-label="select-level-button"
           class="c7"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="c5"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c8"
           disabled=""
         >
           4
         </button>
       </li>
       <li
-        class="c4"
+        class="c5"
       >
         <button
           aria-label="select-level-button"
-          class="c7"
+          class="c8"
           disabled=""
         >
           5
         </button>
       </li>
       <li
-        class="c4"
+        class="c5"
       >
         <button
           aria-label="select-level-button"
-          class="c7"
+          class="c8"
           disabled=""
         >
           6
         </button>
       </li>
     </ul>
+    <h2
+      class="c3"
+    >
+      Current level: 
+      3
+    </h2>
   </nav>
 </section>
 `;

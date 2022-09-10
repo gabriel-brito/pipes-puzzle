@@ -18,6 +18,12 @@ export const Heading = styled.h1`
   margin-bottom: 32px;
 `
 
+export const Subtitle = styled.h2`
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+`
+
 export const Levels = styled.nav`
   background-color: var(--bgContrast);
   border-radius: 8px;
@@ -29,6 +35,7 @@ export const LevelList = styled.ul`
   grid-gap: 16px;
   grid-template-columns: repeat(6, 36px);
   list-style: none;
+  margin: 16px;
 `
 
 export const LevelListItem = styled.li`
