@@ -1,5 +1,10 @@
-function App() {
-  return <h1>Hello World</h1>;
-}
+import styled from 'styled-components'
 
-export default App;
+const Heading = styled.h1`
+  fontsize: 2em;
+  color: blue;
+`
+
+export default function App() {
+  return <Heading>Hello World</Heading>
+}
