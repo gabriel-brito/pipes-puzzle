@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Heading = styled.h1`
-  fontsize: 2em;
+  font-size: 2em;
   color: blue;
 `
 
