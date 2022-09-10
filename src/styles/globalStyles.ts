@@ -19,7 +19,12 @@ const theme = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--bgColor);
     color: white;
-    --bgColor: rgb(40, 42, 54);
+    --bgColor: #1d1e26;
+    --bgContrast: #282a36;
+    --headingSize: calc(32px + (48 - 32) * ((100vw - 300px) / (1440 - 300)));
+    --buttonColor: #21222c;
+    --buttonBg: #9580ff;
+    --disabledBg: #6c7393;
   }
 `
 

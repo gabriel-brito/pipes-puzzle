@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Information should render properly 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 32px auto;
+}
+
+.c1 {
+  font-size: var(--headingSize);
+  margin-bottom: 32px;
+}
+
+.c2 {
+  background-color: var(--bgContrast);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.c3 {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(6,36px);
+  list-style: none;
+}
+
+.c4 {
+  height: 45px;
+}
+
+.c5 {
+  background-color: var(--buttonBg);
+  border-radius: 8px;
+  border: none;
+  color: var(--buttonColor);
+  cursor: pointer;
+  font-size: 600;
+  height: 100%;
+  opacity: initial;
+  width: 100%;
+}
+
+.c5:hover {
+  opacity: 0.7;
+}
+
+.c6 {
+  background-color: var(--buttonBg);
+  background: linear-gradient(135deg,#ff80bf 0,#9580ff 100%);
+  border-radius: 8px;
+  border: none;
+  color: var(--buttonColor);
+  cursor: pointer;
+  font-size: 600;
+  height: 100%;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.c6:hover {
+  opacity: 0.7;
+}
+
+.c7 {
+  background-color: var(--disabledBg);
+  border-radius: 8px;
+  border: none;
+  color: var(--buttonColor);
+  cursor: initial;
+  font-size: 600;
+  height: 100%;
+  opacity: initial;
+  width: 100%;
+}
+
+.c7:hover {
+  opacity: initial;
+}
+
+<section
+  class="c0"
+  data-testid="information-wrapper"
+>
+  <h1
+    class="c1"
+  >
+    Pipes Puzzle
+  </h1>
+  <nav
+    class="c2"
+  >
+    <ul
+      class="c3"
+    >
+      <li
+        class="c4"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c5"
+        >
+          1
+        </button>
+      </li>
+      <li
+        class="c4"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c5"
+        >
+          2
+        </button>
+      </li>
+      <li
+        class="c4"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c6"
+        >
+          3
+        </button>
+      </li>
+      <li
+        class="c4"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c7"
+          disabled=""
+        >
+          4
+        </button>
+      </li>
+      <li
+        class="c4"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c7"
+          disabled=""
+        >
+          5
+        </button>
+      </li>
+      <li
+        class="c4"
+      >
+        <button
+          aria-label="select-level-button"
+          class="c7"
+          disabled=""
+        >
+          6
+        </button>
+      </li>
+    </ul>
+  </nav>
+</section>
+`;
