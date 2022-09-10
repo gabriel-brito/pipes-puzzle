@@ -1,10 +1,9 @@
-import styled from 'styled-components'
-
-const Heading = styled.h1`
-  font-size: 2em;
-  color: blue;
-`
+import Container from 'components/Container'
 
 export default function App() {
-  return <Heading>Hello World</Heading>
+  return (
+    <Container>
+      <h1>Hello World</h1>
+    </Container>
+  )
 }
