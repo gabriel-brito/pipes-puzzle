@@ -12,6 +12,7 @@ export const Pipe = styled.span`
 
   &:hover {
     opacity: 0.7;
+    border: 1px solid white;
   }
 
   &[data-symbol='╸'] {

@@ -23,7 +23,7 @@ export default function App() {
     shouldReconnect: () => true
   })
   const [isConnected, setIsConnected] = useState(false)
-  const [isFreeToGo, setIsFreeToGo] = useState(true)
+  const [isFreeToGo, setIsFreeToGo] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
   const [currentMap, setCurrentMap] = useState<string[][]>([])
   const thereIsAMap = currentMap.length > 0 || null
@@ -72,7 +72,7 @@ export default function App() {
 
       setResultMessage(message)
 
-      if (nextLevelAllowed) console.log('here')
+      if (nextLevelAllowed) setIsFreeToGo(nextLevelAllowed)
     }
   }, [lastMessage])
 
