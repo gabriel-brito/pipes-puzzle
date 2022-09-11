@@ -18,13 +18,12 @@ export const Wrapper = styled.section`
 
 export const Information = styled.h2`
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `
 
 export const PipesWrapper = styled('div')<PipesWrapperTypes>`
   display: grid;
-  grid-gap: 8px;
-  grid-template-columns: repeat(${(props) => props.gridColumnSize}, 40px);
+  grid-template-columns: repeat(${(props) => props.gridColumnSize}, 60px);
   margin-bottom: 24px;
   padding: 0 16px;
 `
@@ -40,7 +39,7 @@ export const Button = styled.button`
   font-size: 600;
   font-weight: 900;
   height: 48px;
-  margin: 16px auto;
+  margin-bottom: 16px;
   width: 128px;
 }
 

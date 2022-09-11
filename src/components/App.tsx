@@ -54,7 +54,7 @@ export default function App() {
         {currentMap.length > 0
           ? currentMap.map((pipes, rowIndex) =>
               pipes.map((pipe, pipeIndex) => (
-                <Pipe key={`pipe-${rowIndex}-${pipeIndex}`}>{pipe}</Pipe>
+                <Pipe key={`pipe-${rowIndex}-${pipeIndex}`} symbol={pipe} />
               ))
             )
           : null}

@@ -1,9 +1,9 @@
 import * as S from './styles'
 
 type PipeTypes = {
-  children: JSX.Element | string
+  symbol: string
 }
 
-export default function Pipe({ children }: PipeTypes) {
-  return <S.Pipe>{children}</S.Pipe>
+export default function Pipe({ symbol }: PipeTypes) {
+  return <S.Pipe data-symbol={symbol} />
 }
