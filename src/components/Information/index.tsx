@@ -2,9 +2,13 @@ import * as S from './styles'
 
 type InformationTypes = {
   currentLevel: number
+  handleLevelChoose: (level: number) => void
 }
 
-export default function Information({ currentLevel }: InformationTypes) {
+export default function Information({
+  currentLevel,
+  handleLevelChoose
+}: InformationTypes) {
   const levels = [1, 2, 3, 4, 5, 6]
 
   return (
@@ -18,6 +22,7 @@ export default function Information({ currentLevel }: InformationTypes) {
           {levels.map((level) => {
             const isCurrentLevel = level === currentLevel
             const isBlocked = level > currentLevel
+            const handleLevel = () => handleLevelChoose(level)
 
             return (
               <S.LevelListItem key={`level-${level}`}>
@@ -26,6 +31,7 @@ export default function Information({ currentLevel }: InformationTypes) {
                   currentLevel={isCurrentLevel}
                   disabled={isBlocked}
                   isBlocked={isBlocked}
+                  onClick={handleLevel}
                 >
                   {level}
                 </S.Button>
