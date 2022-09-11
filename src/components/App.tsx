@@ -1,27 +1,38 @@
 import { useEffect, useState } from 'react'
+import useWebSocket from 'react-use-websocket'
 
 import Container from 'components/Container'
 import Information from 'components/Information'
-import Middleware from 'middleware/'
+
+import { baseURL } from 'utils/constants'
 
 export default function App() {
-  const [connection] = useState(new Middleware())
+  const { sendMessage, lastMessage } = useWebSocket(baseURL as string, {
+    onClose: () => setIsConnected(false),
+    onOpen: () => setIsConnected(true),
+    shouldReconnect: () => true
+  })
   const [isConnected, setIsConnected] = useState(false)
-  const [currentLevel] = useState(4)
+  const [currentLevel, setCurrentLevel] = useState(1)
+  const [currentData, setCurrentData] = useState<MessageEvent<unknown>>()
+
+  const handleLevelChoose = (level: number) => {
+    setCurrentLevel(level)
+    sendMessage(`new ${level}`)
+  }
 
   useEffect(() => {
-    if (!isConnected) {
-      connection.middleware.onopen = () => {
-        console.log('Websocket is connected')
-
-        setIsConnected(true)
-      }
+    if (lastMessage) {
+      setCurrentData(lastMessage)
     }
-  }, [connection, isConnected])
+  }, [lastMessage])
 
   return (
     <Container>
-      <Information currentLevel={currentLevel} />
+      <Information
+        currentLevel={currentLevel}
+        handleLevelChoose={handleLevelChoose}
+      />
     </Container>
   )
 }
