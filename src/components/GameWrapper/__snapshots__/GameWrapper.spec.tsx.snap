@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameWrapper should render properly 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bgContrast);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 32px auto;
+  max-width: 1280px;
+  padding: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c1 {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.c2 {
+  background-color: var(--buttonBg);
+  background: linear-gradient(135deg,#ff80bf 0,#9580ff 100%);
+  border-radius: 8px;
+  border: none;
+  color: var(--buttonColor);
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 600;
+  font-weight: 900;
+  height: 48px;
+  margin-bottom: 16px;
+  width: 128px;
+}
+
+.c2:hover {
+  opacity: 0.7;
+}
+
+@media (max-width:800px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<section
+  class="c0"
+  data-testid="game-wrapper"
+>
+  <h2
+    class="c1"
+  >
+    The game is connected and ready to play!
+  </h2>
+  <button
+    aria-label="start-game-button"
+    class="c2"
+  >
+    Start Game
+  </button>
+</section>
+`;

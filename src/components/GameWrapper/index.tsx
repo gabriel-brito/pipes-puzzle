@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import * as S from './styles'
 
 type GameWrapperTypes = {
-  children?: JSX.Element | JSX.Element[][] | null
+  children?: ReactNode
   gridColumnSize: number
   handleStartGame: () => void
   isConnected: boolean
@@ -20,7 +21,7 @@ export default function GameWrapper({
     : 'Loading...'
 
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid="game-wrapper">
       <S.Information>{message}</S.Information>
 
       {children && (
@@ -30,7 +31,9 @@ export default function GameWrapper({
       )}
 
       {isConnected && !hasStarted && (
-        <S.Button onClick={handleStartGame}>Start Game</S.Button>
+        <S.Button onClick={handleStartGame} aria-label="start-game-button">
+          Start Game
+        </S.Button>
       )}
     </S.Wrapper>
   )
