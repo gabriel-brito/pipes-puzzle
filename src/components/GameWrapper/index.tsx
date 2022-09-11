@@ -15,13 +15,13 @@ export default function GameWrapper({
   hasStarted,
   isConnected
 }: GameWrapperTypes) {
+  const message = isConnected
+    ? 'The game is connected and ready to play!'
+    : 'Loading...'
+
   return (
     <S.Wrapper>
-      <S.Information>
-        {isConnected
-          ? 'The game is connected and ready to play!'
-          : 'Loading...'}
-      </S.Information>
+      <S.Information>{message}</S.Information>
 
       {children && (
         <S.PipesWrapper gridColumnSize={gridColumnSize}>

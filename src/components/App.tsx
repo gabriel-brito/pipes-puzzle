@@ -28,7 +28,7 @@ export default function App() {
   const [isNextLevelAllowed, setIsFreeToGo] = useState(false)
   const [maxLevel, setMaxLevel] = useState(() => getMaxLevel())
   const [resultMessage, setResultMessage] = useState('')
-  const thereIsAMap = currentMap.length > 0 || null
+  const hasMap = currentMap.length > 0 || null
 
   const handleLevelChoose = (level: number) => {
     if (level === currentLevel) return
@@ -97,7 +97,7 @@ export default function App() {
         hasStarted={hasStarted}
         isConnected={isConnected}
       >
-        {thereIsAMap &&
+        {hasMap &&
           currentMap.map((pipes, rowIndex) =>
             pipes.map((pipe, pipeIndex) => (
               <Pipe
