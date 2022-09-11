@@ -5,12 +5,14 @@ type GameWrapperTypes = {
   gridColumnSize: number
   handleStartGame: () => void
   isConnected: boolean
+  hasStarted: boolean
 }
 
 export default function GameWrapper({
   children,
   gridColumnSize,
   handleStartGame,
+  hasStarted,
   isConnected
 }: GameWrapperTypes) {
   return (
@@ -27,7 +29,9 @@ export default function GameWrapper({
         </S.PipesWrapper>
       )}
 
-      {isConnected && <S.Button onClick={handleStartGame}>Start Game</S.Button>}
+      {isConnected && !hasStarted && (
+        <S.Button onClick={handleStartGame}>Start Game</S.Button>
+      )}
     </S.Wrapper>
   )
 }

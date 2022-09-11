@@ -3,11 +3,13 @@ import * as S from './styles'
 type InformationTypes = {
   currentLevel: number
   handleLevelChoose: (level: number) => void
+  maxLevel: number
 }
 
 export default function Information({
   currentLevel,
-  handleLevelChoose
+  handleLevelChoose,
+  maxLevel
 }: InformationTypes) {
   const levels = [1, 2, 3, 4, 5, 6]
 
@@ -21,7 +23,7 @@ export default function Information({
         <S.LevelList>
           {levels.map((level) => {
             const isCurrentLevel = level === currentLevel
-            const isBlocked = level > currentLevel
+            const isBlocked = level > maxLevel
             const handleLevel = () => handleLevelChoose(level)
 
             return (

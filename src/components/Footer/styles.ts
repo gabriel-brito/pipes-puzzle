@@ -1,39 +1,21 @@
 import styled from 'styled-components'
 
-type PipesWrapperTypes = {
-  gridColumnSize: number
-}
-
-export const Wrapper = styled.section`
+export const Wrapper = styled.footer`
   align-items: center;
   background-color: var(--bgContrast);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 32px auto;
-  max-width: 1280px;
+  margin: 0 auto 32px;
   padding: 16px;
   width: fit-content;
-
-  @media (max-width: 800px) {
-    width: 100%;
-  }
 `
 
 export const Information = styled.h2`
-  font-size: 14px;
-  margin-bottom: 24px;
-`
-
-export const PipesWrapper = styled('div')<PipesWrapperTypes>`
-  display: grid;
-  grid-template-columns: repeat(${(props) => props.gridColumnSize}, 60px);
-  margin-bottom: 24px;
-  max-height: 600px;
-  overflow: auto;
-  padding: 16px;
-  width: 100%;
+  font-size: 16px;
+  margin: 0 auto 16px;
+  text-align: center;
 `
 
 export const Button = styled.button`
@@ -47,8 +29,7 @@ export const Button = styled.button`
   font-size: 600;
   font-weight: 900;
   height: 48px;
-  margin-bottom: 16px;
-  width: 128px;
+  width: 200px;
 
   &:hover {
     opacity: 0.7;
