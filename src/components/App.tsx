@@ -32,6 +32,12 @@ export default function App() {
     sendMessage('map')
   }
 
+  const handleRotate = (x: number, y: number) => {
+    sendMessage(`rotate ${x} ${y}`)
+
+    sendMessage('map')
+  }
+
   useEffect(() => {
     if (lastMessage && lastMessage.data.includes('map')) {
       const map = transformIntoMap(lastMessage.data)
@@ -54,7 +60,11 @@ export default function App() {
         {currentMap.length > 0
           ? currentMap.map((pipes, rowIndex) =>
               pipes.map((pipe, pipeIndex) => (
-                <Pipe key={`pipe-${rowIndex}-${pipeIndex}`} symbol={pipe} />
+                <Pipe
+                  key={`pipe-${rowIndex}-${pipeIndex}`}
+                  symbol={pipe}
+                  rotate={() => handleRotate(pipeIndex, rowIndex)}
+                />
               ))
             )
           : null}

@@ -10,6 +10,10 @@ export const Pipe = styled.span`
   justify-content: center;
   width: 60px;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   &[data-symbol='╸'] {
     background-position: 120px 0px;
   }

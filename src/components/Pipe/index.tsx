@@ -2,8 +2,9 @@ import * as S from './styles'
 
 type PipeTypes = {
   symbol: string
+  rotate: () => void
 }
 
-export default function Pipe({ symbol }: PipeTypes) {
-  return <S.Pipe data-symbol={symbol} />
+export default function Pipe({ symbol, rotate }: PipeTypes) {
+  return <S.Pipe data-symbol={symbol} onClick={rotate} />
 }
