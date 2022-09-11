@@ -8,7 +8,11 @@ const handleLevelChoose = jest.fn()
 describe('Information', () => {
   it('should render properly', () => {
     render(
-      <Information currentLevel={3} handleLevelChoose={handleLevelChoose} />
+      <Information
+        currentLevel={3}
+        handleLevelChoose={handleLevelChoose}
+        maxLevel={3}
+      />
     )
 
     expect(
@@ -27,7 +31,11 @@ describe('Information', () => {
 
   it('should have two disabled buttons', () => {
     render(
-      <Information currentLevel={4} handleLevelChoose={handleLevelChoose} />
+      <Information
+        currentLevel={4}
+        handleLevelChoose={handleLevelChoose}
+        maxLevel={4}
+      />
     )
     let disabled = 0
 
@@ -42,7 +50,11 @@ describe('Information', () => {
 
   it('should call fn when clicked', () => {
     render(
-      <Information currentLevel={6} handleLevelChoose={handleLevelChoose} />
+      <Information
+        currentLevel={6}
+        handleLevelChoose={handleLevelChoose}
+        maxLevel={6}
+      />
     )
 
     const buttons = screen.queryAllByLabelText('select-level-button')

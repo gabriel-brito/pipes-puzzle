@@ -82,6 +82,22 @@ exports[`Information should render properly 1`] = `
   opacity: 0.7;
 }
 
+.c8 {
+  background-color: var(--disabledBg);
+  border-radius: 8px;
+  border: none;
+  color: var(--buttonColor);
+  cursor: initial;
+  font-size: 600;
+  height: 100%;
+  opacity: initial;
+  width: 100%;
+}
+
+.c8:hover {
+  opacity: initial;
+}
+
 <section
   class="c0"
   data-testid="information-wrapper"
@@ -137,7 +153,8 @@ exports[`Information should render properly 1`] = `
       >
         <button
           aria-label="select-level-button"
-          class="c6"
+          class="c8"
+          disabled=""
         >
           4
         </button>
@@ -147,7 +164,8 @@ exports[`Information should render properly 1`] = `
       >
         <button
           aria-label="select-level-button"
-          class="c6"
+          class="c8"
+          disabled=""
         >
           5
         </button>
@@ -157,7 +175,8 @@ exports[`Information should render properly 1`] = `
       >
         <button
           aria-label="select-level-button"
-          class="c6"
+          class="c8"
+          disabled=""
         >
           6
         </button>
