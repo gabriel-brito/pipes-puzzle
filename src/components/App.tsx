@@ -31,6 +31,8 @@ export default function App() {
   const thereIsAMap = currentMap.length > 0 || null
 
   const handleLevelChoose = (level: number) => {
+    if (level === currentLevel) return
+
     setCurrentLevel(level)
     sendMessage(`new ${level}`)
     sendMessage('map')
