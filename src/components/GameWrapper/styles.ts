@@ -12,8 +12,13 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   margin: 32px auto;
+  max-width: 1280px;
   padding: 16px;
   width: fit-content;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `
 
 export const Information = styled.h2`
@@ -25,7 +30,9 @@ export const PipesWrapper = styled('div')<PipesWrapperTypes>`
   display: grid;
   grid-template-columns: repeat(${(props) => props.gridColumnSize}, 60px);
   margin-bottom: 24px;
-  padding: 0 16px;
+  overflow: scroll;
+  padding: 16px;
+  width: 100%;
 `
 
 export const Button = styled.button`

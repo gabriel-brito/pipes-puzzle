@@ -21,9 +21,11 @@ export default function GameWrapper({
           : 'Loading...'}
       </S.Information>
 
-      <S.PipesWrapper gridColumnSize={gridColumnSize}>
-        {children}
-      </S.PipesWrapper>
+      {children && (
+        <S.PipesWrapper gridColumnSize={gridColumnSize}>
+          {children}
+        </S.PipesWrapper>
+      )}
 
       {isConnected && <S.Button onClick={handleStartGame}>Start Game</S.Button>}
     </S.Wrapper>

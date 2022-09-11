@@ -10,7 +10,7 @@ import { baseURL } from 'utils/constants'
 import { transformIntoMap } from 'utils/connection'
 
 export default function App() {
-  const [currentLevel, setCurrentLevel] = useState(1)
+  const [currentLevel, setCurrentLevel] = useState(2)
   const { sendMessage, lastMessage } = useWebSocket(baseURL as string, {
     onClose: () => setIsConnected(false),
     onOpen: () => {
@@ -21,11 +21,13 @@ export default function App() {
   })
   const [isConnected, setIsConnected] = useState(false)
   const [currentMap, setCurrentMap] = useState<string[][]>([])
+  const thereIsAMap = currentMap.length > 0 || null
   const [gridColumnSize, setGridColumnSize] = useState(0)
 
   const handleLevelChoose = (level: number) => {
     setCurrentLevel(level)
     sendMessage(`new ${level}`)
+    sendMessage('map')
   }
 
   const handleStartGame = () => {
@@ -57,17 +59,16 @@ export default function App() {
         handleStartGame={handleStartGame}
         isConnected={isConnected}
       >
-        {currentMap.length > 0
-          ? currentMap.map((pipes, rowIndex) =>
-              pipes.map((pipe, pipeIndex) => (
-                <Pipe
-                  key={`pipe-${rowIndex}-${pipeIndex}`}
-                  symbol={pipe}
-                  rotate={() => handleRotate(pipeIndex, rowIndex)}
-                />
-              ))
-            )
-          : null}
+        {thereIsAMap &&
+          currentMap.map((pipes, rowIndex) =>
+            pipes.map((pipe, pipeIndex) => (
+              <Pipe
+                key={`pipe-${rowIndex}-${pipeIndex}`}
+                symbol={pipe}
+                rotate={() => handleRotate(pipeIndex, rowIndex)}
+              />
+            ))
+          )}
       </GameWrapper>
     </Container>
   )
