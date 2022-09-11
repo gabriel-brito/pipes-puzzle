@@ -44,6 +44,7 @@ Note: From level 3+ is really huge! I didn't had time to pass it.
 - The pipes I copied from [Car1ot Solution](https://github.com/car1ot/evolution-pipes). I thought that only the symbols on the screen were weird, so I've searched for something prettier and something that fits my color scheme.
 - Typescript has the "Duck Typing" so it's not necessary to type everything.
 - This is a really small project, so a state management like Redux is not needed. LocalStorage handles it really well.
+- It's not a good practice to let any .env on the project, so you'll need to put your own API URL.
 
 ### Limitations
 
