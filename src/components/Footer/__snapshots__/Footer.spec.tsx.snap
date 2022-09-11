@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render properly 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--bgContrast);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto 32px;
+  padding: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c1 {
+  background-color: var(--buttonBg);
+  background: linear-gradient(135deg,#ff80bf 0,#9580ff 100%);
+  border-radius: 8px;
+  border: none;
+  color: var(--buttonColor);
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 600;
+  font-weight: 900;
+  height: 48px;
+  width: 200px;
+}
+
+.c1:hover {
+  opacity: 0.7;
+}
+
+<footer
+  class="c0"
+  data-testid="footer"
+>
+  <button
+    aria-label="verify-solution-button"
+    class="c1"
+  >
+    Verify Solution
+  </button>
+</footer>
+`;

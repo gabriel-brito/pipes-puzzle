@@ -14,13 +14,17 @@ export default function Footer({
   resultMessage
 }: FooterTypes) {
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid="footer">
       {resultMessage && <S.Information>{resultMessage}</S.Information>}
 
       {!isNextLevelAllowed ? (
-        <S.Button onClick={handleVerify}>Verify Solution</S.Button>
+        <S.Button onClick={handleVerify} aria-label="verify-solution-button">
+          Verify Solution
+        </S.Button>
       ) : (
-        <S.Button onClick={handleNextLevel}>Next Level</S.Button>
+        <S.Button onClick={handleNextLevel} aria-label="next-level-button">
+          Next Level
+        </S.Button>
       )}
     </S.Wrapper>
   )
