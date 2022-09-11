@@ -6,5 +6,5 @@ type PipeTypes = {
 }
 
 export default function Pipe({ symbol, rotate }: PipeTypes) {
-  return <S.Pipe data-symbol={symbol} onClick={rotate} />
+  return <S.Pipe data-symbol={symbol} onClick={rotate} data-testid="pipe" />
 }

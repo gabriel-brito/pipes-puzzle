@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pipe should render properly 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: url(/assets/images/tiles.png);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  height: 60px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 60px;
+}
+
+.c0:hover {
+  opacity: 0.7;
+  border: 1px solid white;
+}
+
+.c0[data-symbol='╸'] {
+  background-position: 120px 0px;
+}
+
+.c0[data-symbol='╹'] {
+  background-position: -60px -60px;
+}
+
+.c0[data-symbol='╺'] {
+  background-position: 60px 0px;
+}
+
+.c0[data-symbol='╻'] {
+  background-position: 60px -60px;
+}
+
+.c0[data-symbol='━'] {
+  background-position: 0px 0px;
+}
+
+.c0[data-symbol='┃'] {
+  background-position: 0px -60px;
+}
+
+.c0[data-symbol='┓'] {
+  background-position: 120px 60px;
+}
+
+.c0[data-symbol='┛'] {
+  background-position: 120px 120px;
+}
+
+.c0[data-symbol='┗'] {
+  background-position: 60px 120px;
+}
+
+.c0[data-symbol='┏'] {
+  background-position: 0px 60px;
+}
+
+.c0[data-symbol='┣'] {
+  background-position: 0px -120px;
+}
+
+.c0[data-symbol='┳'] {
+  background-position: 60px 60px;
+}
+
+.c0[data-symbol='┫'] {
+  background-position: 60px -120px;
+}
+
+.c0[data-symbol='┻'] {
+  background-position: 120px -120px;
+}
+
+.c0[data-symbol='╋'] {
+  background-position: 0px 120px;
+}
+
+<span
+  class="c0"
+  data-symbol="xpto"
+  data-testid="pipe"
+/>
+`;
