@@ -9,11 +9,9 @@ import Footer from 'components/Footer'
 
 import { baseURL } from 'utils/constants'
 import { transformIntoMap, verifyMessage } from 'utils/connection'
-import { getMaxLevel, saveMaxLevel } from 'utils/localstorage'
+import { getMaxLevel, saveMaxLevel } from 'utils/localStorage'
 
 export default function App() {
-  const [currentLevel, setCurrentLevel] = useState(1)
-  const [maxLevel, setMaxLevel] = useState(() => getMaxLevel())
   const { sendMessage, lastMessage } = useWebSocket(baseURL as string, {
     onClose: () => setIsConnected(false),
     onOpen: () => {
@@ -22,13 +20,15 @@ export default function App() {
     },
     shouldReconnect: () => true
   })
-  const [isConnected, setIsConnected] = useState(false)
-  const [isFreeToGo, setIsFreeToGo] = useState(false)
-  const [hasStarted, setHasStarted] = useState(false)
+  const [currentLevel, setCurrentLevel] = useState(1)
   const [currentMap, setCurrentMap] = useState<string[][]>([])
-  const thereIsAMap = currentMap.length > 0 || null
   const [gridColumnSize, setGridColumnSize] = useState(0)
+  const [hasStarted, setHasStarted] = useState(false)
+  const [isConnected, setIsConnected] = useState(false)
+  const [isNextLevelAllowed, setIsFreeToGo] = useState(false)
+  const [maxLevel, setMaxLevel] = useState(() => getMaxLevel())
   const [resultMessage, setResultMessage] = useState('')
+  const thereIsAMap = currentMap.length > 0 || null
 
   const handleLevelChoose = (level: number) => {
     setCurrentLevel(level)
@@ -40,6 +40,7 @@ export default function App() {
 
   const handleStartGame = () => {
     sendMessage('map')
+
     setHasStarted(true)
   }
 
@@ -91,8 +92,8 @@ export default function App() {
       <GameWrapper
         gridColumnSize={gridColumnSize}
         handleStartGame={handleStartGame}
-        isConnected={isConnected}
         hasStarted={hasStarted}
+        isConnected={isConnected}
       >
         {thereIsAMap &&
           currentMap.map((pipes, rowIndex) =>
@@ -110,7 +111,7 @@ export default function App() {
         <Footer
           handleNextLevel={handleNextLevel}
           handleVerify={handleVerify}
-          isFreeToGo={isFreeToGo}
+          isNextLevelAllowed={isNextLevelAllowed}
           resultMessage={resultMessage}
         />
       )}
