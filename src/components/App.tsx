@@ -25,7 +25,7 @@ export default function App() {
   const [gridColumnSize, setGridColumnSize] = useState(0)
   const [hasStarted, setHasStarted] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
-  const [isNextLevelAllowed, setIsFreeToGo] = useState(false)
+  const [isNextLevelAllowed, setIsNextLevelAllowed] = useState(false)
   const [maxLevel, setMaxLevel] = useState(() => getMaxLevel())
   const [resultMessage, setResultMessage] = useState('')
   const hasMap = currentMap.length > 0 || null
@@ -56,7 +56,7 @@ export default function App() {
 
   const handleNextLevel = () => {
     const newLevel = currentLevel + 1
-    setIsFreeToGo(false)
+    setIsNextLevelAllowed(false)
 
     setCurrentLevel(newLevel)
     setMaxLevel(newLevel)
@@ -75,7 +75,7 @@ export default function App() {
 
       setResultMessage(message)
 
-      if (nextLevelAllowed) setIsFreeToGo(nextLevelAllowed)
+      if (nextLevelAllowed) setIsNextLevelAllowed(nextLevelAllowed)
     }
   }, [lastMessage])
 
