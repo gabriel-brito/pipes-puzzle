@@ -4,7 +4,7 @@
 
 ## WARNING!!!
 
-You MUST pass your own `base url` and your own `api_token` to the `.env.local` file.
+You MUST pass your own `base url` to the `.env.local` file.
 
 Example of &nbsp; `.env.local` file.
 ```
